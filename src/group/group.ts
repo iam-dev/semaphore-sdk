@@ -1,7 +1,5 @@
 import { Field, MerkleWitness, Struct } from 'snarkyjs';
 
-export { Group };
-
 export class MyMerkleWitness extends MerkleWitness(8) {}
 let w = {
   isLeft: false,
@@ -11,7 +9,7 @@ let dummyWitness = Array.from(Array(MyMerkleWitness.height - 1).keys()).map(
   () => w
 );
 
-class Group extends Struct({
+export class Group extends Struct({
   _id: Field,
   _witness: MyMerkleWitness,
 }) {

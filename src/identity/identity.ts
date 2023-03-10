@@ -2,9 +2,7 @@ import { Field, Struct } from 'snarkyjs';
 import checkParameter from './checkParameter';
 import { generateCommitment, generateRandomNumber, isJsonArray } from './util';
 
-export { Identity };
-
-class Identity extends Struct({
+export class Identity extends Struct({
   _trapdoor: Field,
   _nullifier: Field,
   _commitment: Field,
